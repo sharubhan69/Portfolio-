@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+      /* Google Font */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap");
+
+      /* Custom CSS */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        list-style: none;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+      }
+      ::selection {
+        color: #2a3b4c;
+        background-color: #e6f700;
+      }
+      body {
+        background-color: #2a3b4c;
+        color: white;
+      }
+      header {
+        width: 100%;
+        background-color: #cbddf0;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      .header-left-side {
+        color: white;
+      }
+      .header-left-side h1 {
+        color: #000000;
+        line-height: 1.2em;
+        font-size: 78px;
+        margin-bottom: 20px;
+        font-weight: 400 !important;
+      }
+      .header-left-side h2 {
+        color: #bea060;
+        font-family: "Inter", sans-serif;
+        font-size: 26px;
+        line-height: 1.2em;
+        font-weight: 500;
+        letter-spacing: 2px;
+      }
+      .header-left-side p {
+        margin-top: 5%;
+        margin-bottom: 10%;
+        font-family: "Inter", sans-serif;
+        letter-spacing: 2px;
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 2;
+      }
+      button {
+        padding: 20px 10px;
+        border: 2px solid #bea060;
+        background: transparent;
+        width: 47%;
+        color: white;
+        margin-right: 15px;
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #bea060;
+        transition: 0.7s;
+      }
+      .btn {
+        width: 97%;
+        background-color: #bea060;
+      }
+      .header-right-side img {
+        width: 300px;
+        height: 400px;
+        border-radius: 10%;
+        object-fit: cover;
+      }
+
+      /* Section Styling */
+      section {
+        background-color: #cbddf0;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        padding: 50px;
+      }
+      section.active {
+        display: block;
+      }
+      section h2 {
+        font-family: "Poppins", sans-serif;
+        color: #ffbd2d;
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      section p {
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        color: #ffffff;
+        line-height: 1.8;
+      }
+      .projects-container {
+        display: flex;
+        gap: 20px;
+      }
+      .card {
+        background-color: #3b3f56;
+        padding: 20px;
+        border-radius: 8px;
+        width: 30%;
+      }
+      .card img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .card h3 {
+        color: #bea060;
+        margin-top: 10px;
+      }
+      .card p {
+        color: #c1bfbf;
+        font-family: "Inter", sans-serif;
+      }
+      form input, form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+         border: 2px solid white;
+        border-radius: 5px;
+        background-color: #3b3f56;
+        color: white;
+      }
+      form button {
+        width: 100%;
+        padding: 15px;
+        background-color: #bea060;
+        color: white;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-left-side">
+        <h1>
+          Atchaya.M <br />
+        </h1>
+        <h2>- UI / UX DESIGNER</h2>
+        <p>
+          Hi, I'm Atchaya – A Web Developer specializing in creating dynamic and responsive websites. I have a strong background in front-end and back-end development, with expertise in HTML, CSS, JavaScript, Bootstrap, and PHP. With experience in tools like VSCode, Git, and SQL Server, I focus on delivering user-centric websites that not only look good but perform efficiently.
+        </p>
+        <button onclick="showSection('about')">About</button>
+        <button onclick="showSection('projects')">My Projects</button>
+        <br /><br />
+        <button onclick="showSection('resume')">Resume Download</button>
+        <button onclick="showSection('work')">View Work</button>
+        <br /><br />
+	<button onclick="showSection('contact')">Contact Me</button>
+        <button onclick="showSection('instagram')">Instagram</button><br><br>
+        <button class="btn" onclick="showSection('hire')">Hire now</button>
+        <br /><br />
+      </div>
+      <div class="header-right-side">
+        <img src="mypic1.jpg" alt="img" />
+      </div>
+    </header>
+
+    <!-- Sections -->
+    <section id="about" class="active">
+      <h2>About Me</h2>
+      <p>My journey in web development started [X years ago] when I discovered my love for problem-solving and creating digital solutions. Over the years, I have worked on diverse projects ranging from simple landing pages to dynamic web applications. I am proficient in modern frameworks like Bootstrap and jQuery and have hands-on experience with tools like VSCode, Git, and SQL Server for version control and database management.
+
+I take pride in writing clean, scalable code and enjoy collaborating with teams to bring ideas to life. Whether it's building from scratch or improving an existing project, I focus on delivering high-quality solutions tailored to the client's needs.
+
+When I'm not coding, you can find me learning about the latest web trends or experimenting with new development tools to enhance my skillset .</p>
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="card">
+          <h3>Project One</h3>
+          <p>A web development project using HTML, CSS, and JavaScript to build a dynamic website.</p>
+        </div>
+        <!-- Project 2 -->
+        <div class="card">
+          <h3>Project Two</h3>
+          <p>A PHP-based backend project to handle user management and dynamic content.</p>
+        </div>
+        <!-- Project 3 -->
+        <div class="card">
+          
+          <h3>Project Three</h3>
+          <p>Worked with Bootstrap and SQL Server to create a responsive and efficient website.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2>Resume Download</h2>
+      <p>Click the button below to download my resume.</p>
+      <a href="resume.pdf" download>
+        <button>Download Resume</button>
+      </a>
+    </section>
+
+    <section id="work">
+      <h2>View Work</h2>
+      <p>Here you can view my latest work and portfolio pieces.</p>
+    </section>
+
+    <section id="instagram">
+      <h2>Instagram</h2>
+      <p>Check out my Instagram profile for more updates.</p>
+    </section>
+
+    <section id="hire">
+      <h2>Hire Me</h2>
+      <p>Interested in working together? Let's connect!</p>
+    </section>
+
+    <!-- Contact Section (Moved to the bottom) -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="submit_form.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <script>
+      function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => section.classList.remove("active"));
+
+        // Show the selected section
+        const sectionToShow = document.getElementById(sectionId);
+        sectionToShow.classList.add("active");
+
+        // Scroll to the section smoothly
+        sectionToShow.scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
